@@ -122,10 +122,10 @@ This module only works for my admins
 """
 
     CAPTION = """
-<b>📂 File :</b> <code>{file_name}</code>
-<b>📀 Size :</b> <code>{file_size}</code>
-<b>🥀 Caption :</b> <i>{file_caption}</i>
+<b>📂 FILE :</b> <code>{file_name}</code>
+<b>📀 SIZE :</b> <code>{file_size}</code>
 
+<b>🥀 CAPTION :</b> <i>{file_caption}</i>
 """
 
     IMDB_TEMPLATE_TXT = """
