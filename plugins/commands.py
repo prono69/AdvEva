@@ -77,7 +77,7 @@ async def start(client, message):
             ]
         ]
 
-        if message.command[1] != "subscribe":
+        if message.command[1] != "subscribe" or message.command[1] != "send_all":
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
