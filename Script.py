@@ -144,3 +144,10 @@ This module only works for my admins
 📖 Plot : <i>{plot}</i>
 
 <b><i>Pᴏᴡᴇʀᴅ Bʏ @Neko_Drive</i></b>"""
+
+    OWNER_INFO = """
+<b>⍟───[ ᴏᴡɴᴇʀ ᴅᴇᴛᴀɪʟꜱ ]───⍟
+    
+• ꜰᴜʟʟ ɴᴀᴍᴇ : Yᴏʀ Mᴏᴍᴍʏ Cʜᴀɴ
+• ᴜꜱᴇʀɴᴀᴍᴇ : @kirito6969
+• ᴘᴇʀᴍᴀɴᴇɴᴛ ᴅᴍ ʟɪɴᴋ : <a href='t.me/kirito6969'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a></b>"""
