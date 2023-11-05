@@ -122,13 +122,10 @@ This module only works for my admins
 """
 
     CAPTION = """
-<b>📂 Fɪʟᴇ ɴᴀᴍᴇ : </b> <code>{file_name}</code>
-<b>
-╭─────── • ◆ • ───────╮
-🔅 Sɪᴢᴇ : {file_size}
-╰─────── • ◆ • ───────╯
-</b>
-<b>▫️ Cᴀᴘᴛɪᴏɴ : <i>{file_caption}</i></b>
+<b>📂 FILE :</b> <code>{file_name}</code>
+<b>📀 SIZE :</b> <code>{file_size}</code>
+
+<b>🥀 CAPTION :</b> <i>{file_caption}</i>
 """
 
     IMDB_TEMPLATE_TXT = """
@@ -154,7 +151,3 @@ This module only works for my admins
 • ꜰᴜʟʟ ɴᴀᴍᴇ : Yᴏʀ Mᴏᴍᴍʏ Cʜᴀɴ
 • ᴜꜱᴇʀɴᴀᴍᴇ : @kirito6969
 • ᴘᴇʀᴍᴀɴᴇɴᴛ ᴅᴍ ʟɪɴᴋ : <a href='t.me/kirito6969'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a></b>"""
-
-    ALRT_TXT = """ʜᴇʟʟᴏ {},
-ᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇQᴜᴇꜱᴛ,
-ʀᴇQᴜᴇꜱᴛ ʏᴏᴜʀ'ꜱ..."""

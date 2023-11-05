@@ -11,7 +11,7 @@ from info import *
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters, enums
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
-from utils import get_size, is_subscribed, get_poster, search_gagala, temp, get_settings, save_group_settings, send_all
+from utils import get_size, is_subscribed, get_poster, search_gagala, temp, get_settings, save_group_settings
 from database.users_chats_db import db
 from database.ia_filterdb import Media, get_file_details, get_search_results
 from database.filters_mdb import (
@@ -127,8 +127,6 @@ async def next_page(bot, query):
                 InlineKeyboardButton("𝗡𝗲𝘅𝘁 ➡️", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
-    btn.insert(0, [InlineKeyboardButton(f'🎬 {search} 🎬', 'rkbtn')])
-    btn.insert(2, [InlineKeyboardButton("📤 𝖲𝖾𝗇𝖽 𝖠𝗅𝗅 𝖥𝗂𝗅𝖾𝗌 📤", callback_data=f"send_all#{req}#{key}#{pre}")])    
     try:
         await query.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(btn)
@@ -424,13 +422,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "pages":
         await query.answer()
-    elif query.data.startswith("send_all"):
-        _, req, key, pre = query.data.split("#")
-        if int(req) not in [query.from_user.id, 0]:
-            return await query.answer(script.ALRT_TXT.format(query.from_user.first_name), show_alert=True)
-            
-    elif query.data == 'rkbtn':
-        await query.answer("𝖧𝖾𝗒 𝖡𝗋𝗈 😍\n\n🎯 𝖢𝗅𝗂𝖼𝗄 𝖮𝗇 𝖳𝗁𝖾 𝖡𝗎𝗍𝗍𝗈𝗇 𝖻𝖾𝗅𝗈𝗐 𝖳𝗁𝖾 𝖥𝗂𝗅𝖾𝗌 𝖸𝗈𝗎 𝖶𝖺𝗇𝗍 𝖠𝗇𝖽 𝖲𝗍𝖺𝗋𝗍 𝖳𝗁𝖾 𝖡𝗈𝗍 ⬇️", True)
     elif query.data == "start":
         buttons = [[
             InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
@@ -701,8 +692,6 @@ async def auto_filter(client, msg, spoll=False):
             ]
             for file in files
         ]
-    btn.insert(0, [InlineKeyboardButton(f'🎬 {search} 🎬', 'rkbtn')])
-    btn.insert(2, [InlineKeyboardButton("📤 𝖲𝖾𝗇𝖽 𝖠𝗅𝗅 𝖥𝗂𝗅𝖾𝗌 📤", callback_data=f"send_all#{req}#{key}#{pre}")])    
 
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
